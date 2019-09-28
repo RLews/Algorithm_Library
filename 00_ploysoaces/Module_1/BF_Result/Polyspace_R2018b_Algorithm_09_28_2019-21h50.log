@@ -1,0 +1,393 @@
+Remark: Option -float-rounding-mode has no effect in Polyspace Bug Finder
+Remark: Option -O2 has no effect in Polyspace Bug Finder
+Remark: Option -main-generator-calls has no effect in Polyspace Bug Finder
+Remark: Option -main-generator-writes-variables has no effect in Polyspace Bug
+|       Finder
+Remark: Option -check-subnormal has no effect in Polyspace Bug Finder
+Remark: Option -uncalled-function-checks has no effect in Polyspace Bug Finder
+<polyspace-bug-finder-nodesktop R2018b PID14524 PGID14524>
+
+Polyspace verification of Algorithm project.
+Starting at 09/28/2019, 21h50.
+
+Option -signed-integer-overflows has no effect in Polyspace Bug Finder.
+Option -unsigned-integer-overflows has no effect in Polyspace Bug Finder.
+
+Activated checkers: 
+       INT_ZERO_DIV, FLOAT_ZERO_DIV, INT_CONV_OVFL, UINT_CONV_OVFL, SIGN_CHANGE, FLOAT_CONV_OVFL, 
+  INT_STD_LIB, FLOAT_STD_LIB, OUT_BOUND_ARRAY, NULL_PTR, OUT_BOUND_PTR, FUNC_CAST, PTR_CAST, 
+  MEM_STD_LIB, STR_STD_LIB, FREED_PTR, DOUBLE_DEALLOCATION, BAD_FREE, BAD_EQUAL_USE, 
+  BAD_EQUAL_EQUAL_USE, DECL_MISMATCH, MISSING_NULL_CHAR, PTR_SIZEOF_MISMATCH, TYPEDEF_MISMATCH, 
+  USELESS_WRITE, NON_INIT_VAR, NON_INIT_PTR, VAR_SHADOWING, MISSING_RETURN, RESOURCE_LEAK, 
+  UNREACHABLE, DEAD_CODE, PARTIALLY_ACCESSED_ARRAY, USELESS_IF, DEADLOCK, BAD_LOCK, DOUBLE_LOCK, 
+  DATA_RACE, DOUBLE_UNLOCK, BAD_UNLOCK, OTHER_STD_LIB, ASSERT, STRING_FORMAT, IMPROPER_ARRAY_INIT, 
+  BAD_PTR_SCALING, SIZEOF_MISUSE, FLOAT_ABSORPTION, LOCAL_ADDR_ESCAPE, STR_FORMAT_BUFFER_OVERFLOW, 
+  STRLIB_BUFFER_OVERFLOW, STRLIB_BUFFER_UNDERFLOW, PUTENV_AUTO_VAR, PTR_TO_DIFF_ARRAY, 
+  ALIGNMENT_CHANGE, READ_ONLY_RESOURCE_WRITE, CLOSED_RESOURCE_USE, DOUBLE_RESOURCE_CLOSE, 
+  DOUBLE_RESOURCE_OPEN, OPERATOR_PRECEDENCE, STD_FUNC_ARG_MISMATCH, INVALID_MEMORY_ASSUMPTION, 
+  CONSTANT_OBJECT_WRITE, INVALID_VA_LIST_ARG, NON_POSITIVE_VLA_SIZE, MEMCMP_STRINGS, 
+  MEMCMP_PADDING_DATA, INVALID_ENV_POINTER, ERRNO_MISUSE, MISSING_ERRNO_RESET, CHARACTER_MISUSE, 
+  CHAR_EOF_CONFUSED, IO_INTERLEAVING, SIG_HANDLER_COMP_EXCP_RETURN, SIG_HANDLER_CALLING_SIGNAL, 
+  UNPROTOTYPED_FUNC_CALL, FILE_OBJECT_MISUSE, FLEXIBLE_ARRAY_MEMBER_STRUCT_MISUSE, 
+  SIG_HANDLER_SHARED_OBJECT, MACRO_USED_AS_OBJECT, SIDE_EFFECT_IGNORED, PRE_UCNAME_JOIN_TOKENS, 
+  PRE_DIRECTIVE_MACRO_ARG, INLINE_CONSTRAINT_NOT_RESPECTED, VA_ARG_INCORRECT_TYPE, 
+  TOO_MANY_VA_ARG_CALLS, STREAM_WITH_SIDE_EFFECT, TEMP_OBJECT_ACCESS, SIG_HANDLER_ERRNO_MISUSE, 
+  DATA_RACE_STD_LIB, ATOMIC_VAR_ACCESS_TWICE, ATOMIC_VAR_SEQUENCE_NOT_ATOMIC
+
+Remark: By default, some results are not generated for headers.
+|       Search for '-generate-results-for' in user documentation to generate results for these headers.
+
+Verifying sources compliance ...
+Warning: MISRA C:2012 checker: the rule 17.3 has been disabled because it applies to the C90 standard and the selected standard is C99.
+Warning: MISRA C:2012 checker: the rule 8.1 has been disabled because it applies to the C90 standard and the selected standard is C99.
+
+Options used with Verifier:
+-lang=C
+-polyspace-version=2.6 (R2018b)
+-date=28/09/2019
+
+User:
+-bug-finder=true (non-official option)
+-I1=E:\git\Algorithm_Library\queue
+-I2=E:\git\Algorithm_Library\queue\queue_qt
+-target=i386
+-compiler=generic
+-c-version=c11
+-dos=true
+-to=Software Safety Analysis level 2
+-import-comments=E:\git\Algorithm_Library\Module_1\BF_Result\comments_bak
+-results-dir=E:\git\Algorithm_Library\Module_1\BF_Result
+-verif-version=1.0
+-author=HP
+-prog=Algorithm
+-misra3=mandatory-required
+
+
+Verifying host configuration:
+Number of cores:                2
+Processor type:                 amd64
+Processor model:                Intel(R) Core(TM) i5-6200U CPU @ 2.30GHz
+Processor frequency:            2.400 GHz
+Memory > 4 GB:                                            15.88 GB
+Tmp space available in C:\Users\HP\AppData\Local\Temp:    30.32 GB
+
+Remark: 2 core(s) detected. The verification creates 2 process(es).
+*** Configuration of the host :	OK
+
+
+Type E:\git\Algorithm_Library\Module_1\BF_Result\kill-rte-kernel.bat on host ENVY to halt Verifier process
+
+
+Polyspace C analysis
+Copyright 1999-2018 The MathWorks, Inc.
+All rights reserved.
+
+Starting at: Sat Sep 28 21:50:48 2019
+Host: MINGW64_NTx_64-6.2 ENVY 0 amd64
+User: HP
+**********************************************************
+***
+*** Verifying C sources
+***
+**********************************************************
+
+Verifying sources ...
+Verifying queue.c (1/2)
+Verifying queue.c (2/2)
+Global compilation phase...
+
+Number of files                  : 2
+Number of lines                  : 370
+Number of lines without comments : 188
+
+Verifying cross-files ANSI C compliance
+E:\git\Algorithm_Library\queue\queue_qt\queue.c, line 90: Warning: procedure 'Que_OverWrite' multiply defined:
+| previously defined at E:\git\Algorithm_Library\queue\queue.c, line 90
+| warning when linking the 2 translation units:
+| E:\git\Algorithm_Library\queue\queue_qt\queue.c
+| E:\git\Algorithm_Library\queue\queue.c
+
+E:\git\Algorithm_Library\queue\queue_qt\queue.c, line 168: Warning: procedure 'Que_OnlyRead' multiply defined:
+| previously defined at E:\git\Algorithm_Library\queue\queue.c, line 168
+| warning when linking the 2 translation units:
+| E:\git\Algorithm_Library\queue\queue_qt\queue.c
+| E:\git\Algorithm_Library\queue\queue.c
+
+E:\git\Algorithm_Library\queue\queue_qt\queue.c, line 21: Warning: procedure 'Que_Init' multiply defined:
+| previously defined at E:\git\Algorithm_Library\queue\queue.c, line 21
+| warning when linking the 2 translation units:
+| E:\git\Algorithm_Library\queue\queue_qt\queue.c
+| E:\git\Algorithm_Library\queue\queue.c
+
+E:\git\Algorithm_Library\queue\queue_qt\queue.c, line 53: Warning: procedure 'Que_Write' multiply defined:
+| previously defined at E:\git\Algorithm_Library\queue\queue.c, line 53
+| warning when linking the 2 translation units:
+| E:\git\Algorithm_Library\queue\queue_qt\queue.c
+| E:\git\Algorithm_Library\queue\queue.c
+
+E:\git\Algorithm_Library\queue\queue_qt\queue.c, line 131: Warning: procedure 'Que_Read' multiply defined:
+| previously defined at E:\git\Algorithm_Library\queue\queue.c, line 131
+| warning when linking the 2 translation units:
+| E:\git\Algorithm_Library\queue\queue_qt\queue.c
+| E:\git\Algorithm_Library\queue\queue.c
+
+
+Stubbing standard library functions ...
+Remark: The generated default DRS XML file "drs-template.xml" can be found in <result_dir> folder.
+Doing code transformations ...
+
+
+**********************************************************
+MISRA C:2012 Rule checker results
+ Use the Report Generator in order to get the complete report.
+Coding rules checking might not be complete. Some rule violations
+ are detected after the source compliance checking phase.
+**********************************************************
+Summary per file:
+  File E:\git\Algorithm_Library\queue\queue.c: 
+    4 rules violated
+  File E:\git\Algorithm_Library\queue\queue.h: 
+    5 rules violated
+  File E:\git\Algorithm_Library\queue\queue_qt\queue.c: 
+    9 rules violated
+  File E:\git\Algorithm_Library\queue\queue_qt\queue.h: 
+    6 rules violated
+**********************************************************
+Summary per rule:
+  rule 21.15 violated 8 times
+  rule 8.5 violated 5 times
+  rule 8.6 violated 5 times
+  rule 5.6 violated 4 times
+  rule 5.7 violated 2 times
+
+
+
+
+Packing compilation data
+
+Defects statistics:
+  - Total number of defects: 0
+done.
+
+**********************************************************
+***
+*** C sources verification done
+***
+**********************************************************
+Ending at: Sat Sep 28 21:50:56 2019
+User time for compilation: 00:00:07.74 (7.75real, 7.75u + 0s (0.17gc))
+
+Polyspace C analysis
+Copyright 1999-2018 The MathWorks, Inc.
+All rights reserved.
+
+Starting at: Sat Sep 28 21:50:56 2019
+Host: MINGW64_NTx_64-6.2 ENVY 0 amd64
+User: HP
+**********************************************************
+***
+*** Beginning Bug-finder - Pre-analysis
+***
+**********************************************************
+**** Bug-finder - Pre-analysis - 1 (P_AL)
+Total complexity = 4008
+**** Bug-finder - Pre-analysis - 1 (P_AL) took 0.36real, 0.36u + 0s
+**** Bug-finder - Pre-analysis - 2 (P_ACP)
+* n-acp-t = 0 n-epp' = 0 n-acp-l = 0
+**** Bug-finder - Pre-analysis - 2 (P_ACP) took 0real, 0u + 0s
+**** Bug-finder - Pre-analysis - 3 (P_O)
+**** Bug-finder - Pre-analysis - 3 (P_O) took 0real, 0u + 0s
+**** Bug-finder - Pre-analysis - 4 (P_MA)
+**** Bug-finder - Pre-analysis - 4 (P_MA) took 0.03real, 0.03u + 0s
+**** Bug-finder - Pre-analysis - 5 (P_G)
+**** Bug-finder - Pre-analysis - 5 (P_G) took 0.02real, 0.02u + 0s
+**** Bug-finder - Pre-analysis - 6 (P_DRC)
+**** Bug-finder - Pre-analysis - 6 (P_DRC) took 0real, 0u + 0s
+**** Bug-finder - Pre-analysis - 7 (P_TT)
+**** Bug-finder - Pre-analysis - 7 (P_TT) took 0real, 0u + 0s
+**** Bug-finder - Pre-analysis - 8 (P_FI)
+**** Bug-finder - Pre-analysis - 8 (P_FI) took 0.35real, 0.35u + 0s
+
+Generating GUI files
+
+Defects statistics:
+  - Total number of defects: 0
+
+GUI files generation completed in 1.2real
+
+**********************************************************
+***
+*** Bug-finder - Pre-analysis done
+***
+**********************************************************
+Ending at: Sat Sep 28 21:51:02 2019
+User time for pre-analysis: 00:00:06.45 (6.45real, 6.45u + 0s (0.23gc))
+
+Polyspace C analysis
+Copyright 1999-2018 The MathWorks, Inc.
+All rights reserved.
+
+Starting at: Sat Sep 28 21:51:02 2019
+Host: MINGW64_NTx_64-6.2 ENVY 0 amd64
+User: HP
+**********************************************************
+***
+*** Beginning Bug-finder - Function Analysis
+***
+**********************************************************
+**** Bug-finder - Function Analysis - (Verifying function #1 / 10: Que_OverWrite)
+**** Bug-finder - Function Analysis - (Verifying function #2 / 10: Que_OnlyRead)
+**** Bug-finder - Function Analysis - (Verifying function #3 / 10: Que_Write)
+**** Bug-finder - Function Analysis - (Verifying function #4 / 10: Que_Write)
+**** Bug-finder - Function Analysis - (Verifying function #5 / 10: Que_OverWrite)
+**** Bug-finder - Function Analysis - (Verifying function #6 / 10: Que_Init)
+**** Bug-finder - Function Analysis - (Verifying function #7 / 10: Que_Read)
+**** Bug-finder - Function Analysis - (Verifying function #8 / 10: Que_OnlyRead)
+**** Bug-finder - Function Analysis - (Verifying function #9 / 10: Que_Init)
+**** Bug-finder - Function Analysis - (Verifying function #10 / 10: Que_Read)
+**** Bug-finder - Function Analysis - (Verifying function #2 / 10: Que_OnlyRead) took 4.24real
+**** Bug-finder - Function Analysis - (Verifying function #1 / 10: Que_OverWrite) took 4.43real
+**** Bug-finder - Function Analysis - (Verifying function #3 / 10: Que_Write) took 0.75real
+**** Bug-finder - Function Analysis - (Verifying function #4 / 10: Que_Write) took 1.04real
+**** Bug-finder - Function Analysis - (Verifying function #6 / 10: Que_Init) took 0.69real
+**** Bug-finder - Function Analysis - (Verifying function #5 / 10: Que_OverWrite) took 1.1real
+**** Bug-finder - Function Analysis - (Verifying function #8 / 10: Que_OnlyRead) took 0.7real
+**** Bug-finder - Function Analysis - (Verifying function #7 / 10: Que_Read) took 0.91real
+**** Bug-finder - Function Analysis - (Verifying function #9 / 10: Que_Init) took 0.76real
+**** Bug-finder - Function Analysis - (Verifying function #10 / 10: Que_Read) took 0.95real
+
+Generating GUI files
+
+Defects statistics:
+  - Total number of defects: 0
+
+GUI files generation completed in 0.57real
+
+* Total IL complexity: 3700
+
+**********************************************************
+***
+*** Bug-finder - Function Analysis done
+***
+**********************************************************
+Ending at: Sat Sep 28 21:51:17 2019
+User time for function: 00:00:14.15 (14.16real, 14.16u + 0s (0.11gc))
+
+Polyspace C analysis
+Copyright 1999-2018 The MathWorks, Inc.
+All rights reserved.
+
+Starting at: Sat Sep 28 21:51:17 2019
+Host: MINGW64_NTx_64-6.2 ENVY 0 amd64
+User: HP
+**********************************************************
+***
+*** Beginning Bug-finder - Module Analysis
+***
+**********************************************************
+**** Bug-finder - Module Analysis - 1 (Computing modules)
+* Created no module as there are no available user functions, or all functions are independent
+**** Bug-finder - Module Analysis - 1 (Computing modules) took 0.02real, 0.02u + 0s
+
+Generating GUI files
+
+Defects statistics:
+  - Total number of defects: 0
+
+GUI files generation completed in 0.54real
+
+**********************************************************
+***
+*** Bug-finder - Module Analysis done
+***
+**********************************************************
+Ending at: Sat Sep 28 21:51:17 2019
+User time for module: 00:00:00.59 (0.6real, 0.6u + 0s (0.09gc))
+
+Polyspace C analysis
+Copyright 1999-2018 The MathWorks, Inc.
+All rights reserved.
+
+Starting at: Sat Sep 28 21:51:18 2019
+Host: MINGW64_NTx_64-6.2 ENVY 0 amd64
+User: HP
+**********************************************************
+***
+*** Beginning Bug-finder - Global analysis
+***
+**********************************************************
+**** Bug-finder - Global analysis - 1 (P_CCG)
+**** Bug-finder - Global analysis - 1 (P_CCG) took 0real, 0u + 0s
+
+Generating GUI files
+
+Defects statistics:
+  - Total number of defects: 0
+
+GUI files generation completed in 0.55real
+
+
+**********************************************************
+MISRA C:2012 Rule checker results
+ Use the Report Generator in order to get the complete report.
+**********************************************************
+Summary per file:
+  File E:\git\Algorithm_Library\queue\queue.c: 
+    9 rules violated
+  File E:\git\Algorithm_Library\queue\queue.h: 
+    5 rules violated
+  File E:\git\Algorithm_Library\queue\queue_qt\queue.c: 
+    14 rules violated
+  File E:\git\Algorithm_Library\queue\queue_qt\queue.h: 
+    6 rules violated
+**********************************************************
+Summary per rule:
+  rule D4.14 violated 10 times
+  rule 21.15 violated 8 times
+  rule 8.5 violated 5 times
+  rule 8.6 violated 5 times
+  rule 5.6 violated 4 times
+  rule 5.7 violated 2 times
+
+Importing comments from E:\git\Algorithm_Library\Module_1\BF_Result\comments_bak folder
+main.c: File not found in the new results
+main.c: File not found in the new results
+
+Operation completed:
+--------------------
+
+Diff statistics for Defect results:
+-----------------------------------
+| Number of backuped comments attached to disappeared results                : 0
+| Number of unmatched uncommented results                                    : 10
+| Number of results comments not imported because a more recent one was found: 0
+| Number of partially imported results comments (due to a result change)     : 0
+| Number of fully imported results comments                                  : 0
+| Number of matched results without comment                                  : 0
+| Number of matched results with a comment coming from source code annotation: 0
+| Total number of results                                                    : 10
+
+Diff statistics for MISRA C:2012 results:
+-----------------------------------------
+| Number of backuped comments attached to disappeared results                : 0
+| Number of unmatched uncommented results                                    : 141
+| Number of results comments not imported because a more recent one was found: 0
+| Number of partially imported results comments (due to a result change)     : 0
+| Number of fully imported results comments                                  : 0
+| Number of matched results without comment                                  : 29
+| Number of matched results with a comment coming from source code annotation: 0
+| Total number of results                                                    : 170
+
+
+**********************************************************
+***
+*** Bug-finder - Global analysis done
+***
+**********************************************************
+Ending at: Sat Sep 28 21:51:19 2019
+User time for global: 00:00:01.49 (1.49real, 1.49u + 0s (0.11gc))
+User time for polyspace-bug-finder-nodesktop: 00:00:31.80 (31.8real, 31.8u + 0s (0.72gc))
+
+***
+*** End of Polyspace analysis
+***

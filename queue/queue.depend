@@ -11,3 +11,13 @@
 1569672577 source:e:\git\algorithm_library\╤сап\queue\queue.c
 	"queue.h"
 
+1569676497 source:e:\git\algorithm_library\queue\main.c
+	"queue.h"
+	<time.h>
+
+1569672307 e:\git\algorithm_library\queue\queue.h
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	<stdint.h>
+

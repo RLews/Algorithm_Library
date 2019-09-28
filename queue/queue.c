@@ -63,7 +63,7 @@ QueueOptRes_t Que_Write(Queue_t *pQue, const void *pDat)
         return QUEUE_OPT_IS_FULL;
     }
 
-    (void)memcpy(&pQue->Que_DataPtr[pQue->Que_RearIndex * pQue->Que_SingleSize], pDat, pQue->Que_SingleSize);
+    (void)memcpy((void *)&pQue->Que_DataPtr[pQue->Que_RearIndex * pQue->Que_SingleSize], pDat, pQue->Que_SingleSize);
     pQue->Que_RearIndex++;
     pQue->Que_UseSize++;
     if (pQue->Que_RearIndex >= pQue->Que_MaxSize)
@@ -95,7 +95,7 @@ QueueOptRes_t Que_OverWrite(Queue_t *pQue, const void *pDat)
         return QUEUE_OPT_PARAM_ERR;
     }
 
-    (void)memcpy(&pQue->Que_DataPtr[pQue->Que_RearIndex * pQue->Que_SingleSize], pDat, pQue->Que_SingleSize);
+    (void)memcpy((void *)&pQue->Que_DataPtr[pQue->Que_RearIndex * pQue->Que_SingleSize], pDat, pQue->Que_SingleSize);
     pQue->Que_RearIndex++;
 
     if (pQue->Que_RearIndex >= pQue->Que_MaxSize)
@@ -141,7 +141,7 @@ QueueOptRes_t Que_Read(Queue_t *pQue, void *pDat)
         return QUEUE_OPT_IS_EMPTY;
     }
 
-    (void)memcpy(pDat, &pQue->Que_DataPtr[pQue->Que_FrontIndex * pQue->Que_SingleSize], pQue->Que_SingleSize);
+    (void)memcpy(pDat, (void *)&pQue->Que_DataPtr[pQue->Que_FrontIndex * pQue->Que_SingleSize], pQue->Que_SingleSize);
     pQue->Que_FrontIndex++;
     pQue->Que_UseSize--;
     if (pQue->Que_FrontIndex >= pQue->Que_MaxSize)
@@ -178,7 +178,7 @@ QueueOptRes_t Que_OnlyRead(Queue_t *pQue, void *pDat)
         return QUEUE_OPT_IS_EMPTY;
     }
 
-    (void)memcpy(pDat, &pQue->Que_DataPtr[pQue->Que_FrontIndex * pQue->Que_SingleSize], pQue->Que_SingleSize);
+    (void)memcpy(pDat, (void *)&pQue->Que_DataPtr[pQue->Que_FrontIndex * pQue->Que_SingleSize], pQue->Que_SingleSize);
 
     return QUEUE_OPT_SUCCESS;
 }
