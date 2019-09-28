@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1569675847 source:e:\git\algorithm_library\队列\queue\main.c
+	"queue.h"
+
+1569672307 e:\git\algorithm_library\队列\queue\queue.h
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	<stdint.h>
+
+1569672577 source:e:\git\algorithm_library\队列\queue\queue.c
+	"queue.h"
+
