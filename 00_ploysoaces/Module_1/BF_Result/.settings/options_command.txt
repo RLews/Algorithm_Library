@@ -4,7 +4,7 @@
 -prog Algorithm
 -verif-version 1.0
 -author HP
--sources-list-file E:\git\Algorithm_Library\Module_1\BF_Result\.settings\source_command.txt
+-sources-list-file E:\git\Algorithm_Library\00_ploysoaces\Module_1\BF_Result\.settings\source_command.txt
 -lang C
 -target i386
 -compiler generic
@@ -20,5 +20,5 @@
 -check-subnormal allow
 -O2
 -to Software Safety Analysis level 2
--import-comments E:\git\Algorithm_Library\Module_1\BF_Result
+-import-comments E:\git\Algorithm_Library\00_ploysoaces\Module_1\BF_Result
 

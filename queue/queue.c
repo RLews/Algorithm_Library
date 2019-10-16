@@ -20,11 +20,19 @@
 */
 QueueOptRes_t Que_Init(Queue_t *pQue, QueSize_t maxSize, QueSize_t datSize, void *pDatBase)
 {
-    if ((pQue == NULL)
-     || (pDatBase == NULL)
-     || (maxSize == 0U))
+    if (pQue == NULL)
     {
         return QUEUE_OPT_PARAM_ERR;
+    }
+     
+    if (pDatBase == NULL)
+    {
+	return QUEUE_OPT_PARAM_ERR;
+    }
+    
+    if (maxSize == 0U)
+    {
+	return QUEUE_OPT_PARAM_ERR;
     }
 
     pQue->Que_DataPtr = pDatBase;

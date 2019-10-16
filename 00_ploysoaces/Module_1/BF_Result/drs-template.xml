@@ -12,17 +12,17 @@
          <scalar name="arg3" comment="" line="21" base_type="uint16" complete_type="uint16" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
          <scalar name="return" comment="" line="21" base_type="int32" complete_type="enum QUEUE_OPT_RESULT_T" init_mode="disabled" init_range="disabled" global_assert="unsupported" assert_range="unsupported"/>
       </function>
-      <function name="Que_OnlyRead" comment="" line="168" main_generator_called="MAIN_GENERATOR">
-         <scalar name="return" comment="" line="168" base_type="int32" complete_type="enum QUEUE_OPT_RESULT_T" init_mode="disabled" init_range="disabled" global_assert="unsupported" assert_range="unsupported"/>
+      <function name="Que_OnlyRead" comment="" line="176" main_generator_called="MAIN_GENERATOR">
+         <scalar name="return" comment="" line="176" base_type="int32" complete_type="enum QUEUE_OPT_RESULT_T" init_mode="disabled" init_range="disabled" global_assert="unsupported" assert_range="unsupported"/>
       </function>
-      <function name="Que_OverWrite" comment="" line="90" main_generator_called="MAIN_GENERATOR">
-         <scalar name="return" comment="" line="90" base_type="int32" complete_type="enum QUEUE_OPT_RESULT_T" init_mode="disabled" init_range="disabled" global_assert="unsupported" assert_range="unsupported"/>
+      <function name="Que_OverWrite" comment="" line="98" main_generator_called="MAIN_GENERATOR">
+         <scalar name="return" comment="" line="98" base_type="int32" complete_type="enum QUEUE_OPT_RESULT_T" init_mode="disabled" init_range="disabled" global_assert="unsupported" assert_range="unsupported"/>
       </function>
-      <function name="Que_Read" comment="" line="131" main_generator_called="MAIN_GENERATOR">
-         <scalar name="return" comment="" line="131" base_type="int32" complete_type="enum QUEUE_OPT_RESULT_T" init_mode="disabled" init_range="disabled" global_assert="unsupported" assert_range="unsupported"/>
+      <function name="Que_Read" comment="" line="139" main_generator_called="MAIN_GENERATOR">
+         <scalar name="return" comment="" line="139" base_type="int32" complete_type="enum QUEUE_OPT_RESULT_T" init_mode="disabled" init_range="disabled" global_assert="unsupported" assert_range="unsupported"/>
       </function>
-      <function name="Que_Write" comment="" line="53" main_generator_called="MAIN_GENERATOR">
-         <scalar name="return" comment="" line="53" base_type="int32" complete_type="enum QUEUE_OPT_RESULT_T" init_mode="disabled" init_range="disabled" global_assert="unsupported" assert_range="unsupported"/>
+      <function name="Que_Write" comment="" line="61" main_generator_called="MAIN_GENERATOR">
+         <scalar name="return" comment="" line="61" base_type="int32" complete_type="enum QUEUE_OPT_RESULT_T" init_mode="disabled" init_range="disabled" global_assert="unsupported" assert_range="unsupported"/>
       </function>
    </file>
 </global>
