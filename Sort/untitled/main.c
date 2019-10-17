@@ -92,6 +92,7 @@ void Sort_Heap(SortData_t pDat[], SortDatLen_t n)
 
 /*!
     @brief 取最低索引，将小于自身的放入左边，其他的放入右边
+    exp:
     3   5   2   4   1   3       temp = 3
     L                   H
 
@@ -146,6 +147,56 @@ void Sort_Quick(SortData_t pDat[], SortDatLen_t low, SortDatLen_t high)
     }
 }
 
+/*!
+    @brief 插入排序
+*/
+void Sort_Insert(SortData_t pDat[], SortDatLen_t n)
+{
+    SortDatLen_t i = 0;
+    SortDatLen_t j = 0;
+    SortData_t temp = 0;
+
+    if (pDat == NULL)
+    {
+        return;
+    }
+
+    for (i = 1; i < n; i++)
+    {
+        temp = pDat[i]; //取出来未排序列中第一个元素
+        for (j = i; (j > 0) && (pDat[j - 1] > temp); j--)
+        {
+            pDat[j] = pDat[j - 1]; //依次与以排序列比较
+        }
+        pDat[j] = temp;
+    }
+}
+
+/*!
+    @brief 冒泡排序
+*/
+void Sort_Bubbling(SortData_t pDat[], SortDatLen_t len)
+{
+    SortDatLen_t i = 0;
+    SortDatLen_t j = 0;
+
+    if (pDat == NULL)
+    {
+        return;
+    }
+
+    for (i = 0; i < (len - 1); i++)
+    {
+        for (j = 0; j < (len - 1 - i); j++)
+        {
+            if (pDat[j] > pDat[j + 1])
+            {
+                Sort_SwapData(&pDat[j], &pDat[j + 1]);
+            }
+        }
+    }
+}
+
 static void Sort_DebugPrint(const SortData_t pBuf[], SortDatLen_t n)
 {
     SortDatLen_t i = 0;
@@ -162,9 +213,13 @@ int main()
 {
     SortData_t heapSortRes[SORT_DATA_LEN] = {0};
     SortData_t quickSortRes[SORT_DATA_LEN] = {0};
+    SortData_t insertSortRes[SORT_DATA_LEN] = {0};
+    SortData_t bubbSortRes[SORT_DATA_LEN] = {0};
 
-    memcpy(heapSortRes, SortDataSrc, SORT_DATA_LEN * sizeof(SortData_t));
-    memcpy(quickSortRes, SortDataSrc, SORT_DATA_LEN * sizeof(SortData_t));
+    (void)memcpy(heapSortRes, SortDataSrc, SORT_DATA_LEN * sizeof(SortData_t));
+    (void)memcpy(quickSortRes, SortDataSrc, SORT_DATA_LEN * sizeof(SortData_t));
+    (void)memcpy(insertSortRes, SortDataSrc, SORT_DATA_LEN * sizeof(SortData_t));
+    (void)memcpy(bubbSortRes, SortDataSrc, SORT_DATA_LEN * sizeof(SortData_t));
 
     Sort_Heap(heapSortRes, SORT_DATA_LEN);
     printf("Heap Sort Output : \n");
@@ -173,6 +228,14 @@ int main()
     Sort_Quick(quickSortRes, 0, SORT_DATA_LEN - 1);
     printf("Quick Sort Output : \n");
     Sort_DebugPrint(quickSortRes, SORT_DATA_LEN);
+
+    Sort_Insert(insertSortRes, SORT_DATA_LEN);
+    printf("Insert Sort Output : \n");
+    Sort_DebugPrint(insertSortRes, SORT_DATA_LEN);
+
+    Sort_Bubbling(bubbSortRes, SORT_DATA_LEN);
+    printf("Bubbling Sort Output : \n");
+    Sort_DebugPrint(bubbSortRes, SORT_DATA_LEN);
 
     return 0;
 }
